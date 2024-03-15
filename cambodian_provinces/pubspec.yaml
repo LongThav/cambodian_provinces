@@ -1,7 +1,11 @@
 name: cambodian_provinces
+# github link:
 description: A Dart package that provides a list of provinces in Cambodia and a dropdown field for selecting a province.
+homepage: https://github.com/LongThav/cambodian_provinces/tree/main/cambodian_provinces
 version: 1.0.0
 # repository: https://github.com/my_org/my_repo
+
+license: MIT
 
 environment:
   sdk: ^3.2.6

@@ -11,29 +11,69 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+This package provides a list of provinces in Cambodia, along with utility functions for working with this data. It can be useful for developers building applications or tools that require information about Cambodian provinces.
 
 ## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+List of Provinces: Access a comprehensive list of provinces in Cambodia.
+Utility Functions: Use utility functions to get the total number of provinces and build dropdown form fields for selecting provinces.
 
 ## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+To start using this package, simply add it to your pubspec.yaml file:
 
 ```dart
-const like = 'sample';
+
+dependencies:
+  cambodian_provinces: ^1.0.0
+
+```
+
+Then, import the package in your Dart code:
+
+```dart
+import 'package:cambodian_provinces/cambodian_provinces.dart';
+```
+
+
+## Usage
+Here's an example of how you can use the package to build a dropdown form field for selecting provinces:
+
+```dart
+
+import 'package:flutter/material.dart';
+import 'package:cambodian_provinces/cambodian_provinces.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Cambodian Provinces Example'),
+        ),
+        body: Center(
+          child: buildProvinceDropdownFormField(
+            value: null,
+            onChanged: (String? newValue) {
+              print('Selected province: $newValue');
+            },
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+```
+
+
+```dart
+const like = 'cambodian_provinces';
 ```
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+For more information about this package, visit the package page on pub.dev. You can contribute to the package or report issues on GitHub. We welcome any feedback or suggestions from users.
